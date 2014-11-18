@@ -4,21 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- tells bootstrap to make site as big as the screen -->
-    <meta name="description" content="">
-    <meta name="author" content=""> <!-- your name -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico"> <!--Icon that represents you -->
+    <meta name="description" content="<%= @description %> ">
+    <meta name="author" content="Samantha Marie Ballard">
+    <link rel="shortcut icon" href="/ico/favicon.ico"> <!-- Make an Icon that represents you -->
 
-    <title>INSTANT - Bootstrap Theme</title>
+    <title><%= @title %></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,56 +36,45 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">INSTANT</a>
+          <a class="navbar-brand" href="/">Portfolio</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#works">Works</a></li>
+            <li class=" <%= @home %> "><a href="/">Home</a></li>
+            <li class=" <%= @about %> "><a href="/about">About</a></li>
+            <li class=" <%= @works %> "><a href="/works">Works</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-
-	<div id="headerwrap">
-	    <div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-lg-offset-3">
-					<h4>HELLO PEOPLE, MY NAME IS</h4>
-					<h1>PAUL SILVA</h1>
-					<h4>WEB DESIGNER, DEVELOPER & GAME ADDICT</h4>
-				</div>
-			</div><! --/row -->
-	    </div> <!-- /container -->
-	</div><! --/headerwrap -->
+<%= yield %>
 	
-	<section id="works"></section>
+	<!-- <section id="works"></section>
 	<div class="container">
 		<div class="row centered mt mb">
 			<h1>My Portfolio</h1>
 			
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio01.png" class="img-responsive"></a>
+				<a href="/work"><img src="/img/portfolio/folio01.png" class="img-responsive"></a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio02.png" class="img-responsive"></a>
+				<a href="/work"><img src="/img/portfolio/folio02.png" class="img-responsive"></a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio03.png" class="img-responsive"></a>
+				<a href="/work"><img src="/img/portfolio/folio03.png" class="img-responsive"></a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio04.png" class="img-responsive"></a>
+				<a href="/work"><img src="/img/portfolio/folio04.png" class="img-responsive"></a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio05.png" class="img-responsive"></a>
+				<a href="/work"><img src="/img/portfolio/folio05.png" class="img-responsive"></a>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="assets/img/portfolio/folio06.png" class="img-responsive"></a>
+				<a href="/work"><img src="/img/portfolio/folio06.png" class="img-responsive"></a>
 			</div>
-		</div><! --/row -->
-	</div><! --/container -->
+		</div>
+    </div> -->
 	
 	<div id="social">
 		<div class="container">
@@ -97,10 +83,10 @@
 					<a href="#"><i class="fa fa-dribbble"></i></a>
 				</div>
 				<div class="col-lg-2">
-					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.facebook.com/samantha.ballard.9699"><i class="fa fa-facebook"></i></a>
 				</div>
 				<div class="col-lg-2">
-					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="https://twitter.com/SamBall23"><i class="fa fa-twitter"></i></a>
 				</div>
 				<div class="col-lg-2">
 					<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -120,11 +106,11 @@
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-4">
-					<p><b>WEB DESIGNER, DEVELOPER & GAME ADDICT</b></p>
+					<p><b>COMMUNICATOR, ARTISTS & GAMER</b></p>
 				</div>
 			
 				<div class="col-lg-4">
-					<p>Living in the amazing London.</p>
+					<p>Living in the amazing Louisville, KY.</p>
 				</div>
 				<div class="col-lg-4">
 					<p>hello@instant.com</p>
@@ -139,6 +125,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
